@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --yellow: hsl(71, 73%, 54%);
+    --gray: hsl(204, 43%, 93%);
+    --blue: hsl(218, 22%, 67%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    background-color: var(--gray);
+    font-family: 'Karla', sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    margin: 2em;
+    max-width: 24rem;
+}
+
+main > * {
+    padding: 2em;
+}
+
+article {
+    background-color: var(--white);
+    border-radius: 10px 10px 0 0;
+}
+
+article h1 {
+    color: var(--cyan);
+}
+
+article h2 {
+    margin-block: 1.4em;
+    color: var(--yellow);
+    font-size: 1.2rem;
+}
+
+article p {
+    color: var(--blue);
+}
+
+.subscription, button {
+    color: var(--white);
+    background-color: var(--cyan);
+}
+
+.subscription h1 {
+    font-size: 1.4rem;
+}
+
+.price {
+    margin-block: 1em .8em;
+    display: flex;
+    align-items: center;
+    color: hsl(0, 0%, 100%, .7);
+}
+
+.price span {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: .4em;
+}
+
+.subscription button {
+    background-color: var(--yellow);
+    border: none;
+    width: 100%;
+    padding: 1em 1em;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    margin-top: 2.2em;
+
+}
+
+.whyus {
+   background-color: hsl(179, 62%, 43%, .8);
+   color: hsl(0, 0%, 100%, .7);
+   border-radius: 0 0 10px 10px;
+}
+
+.whyus h1 {
+    margin-bottom: 1em;
+    color: var(--white);
+}
+
+@media (min-width: 35em) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        max-width: 40em;
+        max-height: 34em;
+    }
+
+    article {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        max-height: min-content;
+    }
+
+    article h2 {
+        margin-block: .8em;
+    }
+
+    .subscription {
+        border-radius: 0 0 0 10px;
+    }
+
+
+    .whyus {
+        border-radius: 0 0 10px 0
+    }
+}
